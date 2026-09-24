@@ -1,0 +1,5 @@
+# Simple OMR route
+
+Audiveris is the primary PDF-to-MusicXML engine. Run it in an isolated directory, capture diagnostics, and treat its output as a draft until MusicXML QA passes. In explicit vocal mode, enable Audiveris OCR with its supported `-constant` settings, select the requested Tesseract language, and allow one OCR-focused retry when lyrics, OCR, or structure is missing. Do not exceed two Audiveris attempts or fuse candidates. Non-vocal Audiveris failures may use the existing single HOMR fallback.
+
+After either engine, run completeness QA for notes, rests, lyrics/syllables, dynamics, slurs, ties, tuplets, articulations, key/time signatures, clefs, durations, and suspicious measures. In vocal mode, zero lyrics is a critical failure. Standard mode allows one safe XML normalization and no visual repair. Detailed mode applies local MusicXML repairs, re-renders, and continues only while the review makes material progress. MuseScore rendering is the final practical gate, and transpose additionally compares recognized content before/after transposition. Detailed OMR/XML errors stay in debug JSON; user-facing responses should remain short.

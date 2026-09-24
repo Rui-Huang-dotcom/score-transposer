@@ -1,0 +1,4 @@
+interface:
+  display_name: "Score Transposer"
+  short_description: "Transpose and digitize sheet music"
+  default_prompt: "Use $score-transposer to digitize this PDF into editable MusicXML or transpose it as requested, verify the result, and report uncertain passages."

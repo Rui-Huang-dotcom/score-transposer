@@ -1,0 +1,7 @@
+.venv/
+.venv-homr/
+__pycache__/
+*.py[cod]
+.score-transposer-initialized
+.DS_Store
+*.log
